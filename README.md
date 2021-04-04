@@ -20,12 +20,12 @@ Additionally, the In-Silico generated data for all the instances reported in the
 
 ### ```In_Silico.py```
 This file requires the following user-specified inputs:
-- params_dict: 
-- instances_per_model:
-- models: 
-- sigmar:
-- sigmac:
-- distribution: 
+- ***params_dict***: 
+- ***instances_per_model***:
+- ***models***: 
+- ***sigmar***:
+- ***sigmac***:
+- ***distribution***: 
 
 The generated data is provided 
 
