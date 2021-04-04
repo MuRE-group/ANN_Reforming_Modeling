@@ -5,7 +5,7 @@ This is the official GitHub repository of the paper "Improving the robustness of
 The main purpose of this repository is to share the code relative to the In-Silico data generation step and the kinetic model discrimination through an Artificial Neural Network. This code was fully written in Python using an Anaconda virtual environment.
 
 ## Dependancies
-The Anaconda enviroment used in this work mainly requires commonly used packages like Numpy, Scipy, Pandas, Scikit-Learn, Tensorflow or Keras. To replicate the environment, download the provided [ANN_Naphtha_Reforming.yml](ANN_Naphtha_Reforming.yml) file and type the following command:
+The Anaconda enviroment used in this work mainly requires commonly used packages like Numpy, Scipy, Pandas, Scikit-Learn, Tensorflow or Keras. To replicate the environment, download the provided ```ANN_Naphtha_Reforming.yml``` file and type the following command:
 ```
 conda env create -f ANN_Naphtha_Reforming.yml
 ```
@@ -40,11 +40,11 @@ This folder contains several folders underneath which contain the data generated
 - ```README_In_Silico.txt```
 
 ### ```Trained_Models/```
-This folder also contains several folders, each of them corresponding to the same cases present in ```In_Silico/. Each subfolder contains the output of ANN_In_Silico.py```:
+This folder also contains several folders, each of them corresponding to the same cases present in ```In_Silico/```. Each subfolder stores the output of ```ANN_In_Silico.py```:
 - The files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete results from the grid search for the ANN. 
 - The model with the best performing hyperparameters is provided in both json (```best_model.json```) and h5 (```best_model.h5```) formats, as suggested by [Tensorflow](https://www.tensorflow.org/guide/keras/save_and_serialize). 
-- ```README_In_Silico.txt```
-- ```README_Best_Training.txt```
+- ```README_In_Silico.txt``` is a text summary of the in-silico data used for training the ANN.
+- ```README_Best_Training.txt``` is a text summary of the ANN training outcome.
 
 ## Authorship
 
