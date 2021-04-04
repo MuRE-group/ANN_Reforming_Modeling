@@ -5,7 +5,7 @@ This is the official GitHub repository of the paper "Improving the robustness of
 The main purpose of this repository is to share the code relative to the In-Silico data generation step and the kinetic model discrimination through an Artificial Neural Network. This code was fully written in Python using an Anaconda virtual environment.
 
 ## Dependancies
-The Anaconda enviroment used in this work mainly requires commonly used packages like Numpy, Scipy, Pandas, Scikit-Learn, Tensorflow or Keras. To replicate the environment, download the provided [ANN_Naphtha_Reforming.yml](environment.yml) file and type the following command:
+The Anaconda enviroment used in this work mainly requires commonly used packages like Numpy, Scipy, Pandas, Scikit-Learn, Tensorflow or Keras. To replicate the environment, download the provided [ANN_Naphtha_Reforming.yml](ANN_Naphtha_Reforming.yml) file and type the following command:
 ```
 conda env create -f ANN_Naphtha_Reforming.yml
 ```
