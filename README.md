@@ -48,11 +48,11 @@ This file has the following dependencies:
 The files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete results from the grid search for the ANN. The model with the best performing hyperparameters is provided in both json (```best_model.json```) and h5 (```best_model.h5```) formats, as suggested by [Tensorflow](https://www.tensorflow.org/guide/keras/save_and_serialize). A text summary of the ANN training outcome ```README_Best_Training.txt``` is also provided.
 
 ### ```In_Silico/```
-This folder contains several (compressed) folders underneath which contain the data generated in-silico for all the cases reported in the paper. In each of the subfolders, data corresponding to same kinetic parameter domain without noise is stored, varying the number of instances per model (50, 125, 250, 500) from one to another. Each of the subfolders contains the output of ```In_Silico.py```:
+This folder contains several (compressed) folders underneath which contain the data generated in-silico for all the cases reported in the paper. In each of the subfolders, data corresponding to same kinetic parameter domain without noise is stored, varying the number of instances per model (50, 125, 250, 500) from one to another. Each subfolder contains the output of ```In_Silico.py```:
 - ```Data_in_silico_*instances_per_model*```
 - ```README_In_Silico.txt```
 
-Because of the large size of some .csv files, these have been pickled and therefore, have to be unpickled. For instance, to unplickle the data corresponding to 50 instances () the following commands shoulld be emplpoyed:
+Because of the large size of some .csv files, these have been pickled and therefore, have to be unpickled in order to be used. For instance, to unplickle the data corresponding to 50 instances (```Data_in_silico_50```) into ```Data_in_silico_50.csv```, the following commands should be employed:
 
 with open('Data_in_silico_50', 'rb') as picklefile:
     df = pickle.load(picklefile)
