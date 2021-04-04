@@ -1,8 +1,5 @@
 # ANN-based kinetic model discrimination 
-This is the official GitHub repository of the paper "Improving the robustness of the hydrocarbon steam reforming kinetic models based on artificial neural networks".
-
-## Description
-The main purpose of this repository is to share the code relative to the In-Silico data generation step and the kinetic model discrimination through an Artificial Neural Network. This code was fully written in Python using an Anaconda virtual environment.
+This is the official GitHub repository of the paper "Improving the robustness of the hydrocarbon steam reforming kinetic models based on artificial neural networks". The main purpose of this repository is to share the code relative to the In-Silico data generation step and the kinetic model discrimination through an Artificial Neural Network. This code was fully written in Python using an Anaconda virtual environment.
 
 ## Dependencies
 The Anaconda enviroment used in this work mainly requires commonly used packages like Numpy, Scipy, Pandas, Scikit-Learn, Tensorflow or Keras. To replicate the environment, download the provided ```ANN_Naphtha_Reforming.yml``` file and type the following command:
@@ -61,9 +58,5 @@ This folder also contains several folders, each of them corresponding to the sam
 - ```best_model.json```
 - ```best_model.h5```
 - ```README_Best_Training.txt``` 
-
-## Authorship
-
-## Acknowledgments
 
 ## Citations
