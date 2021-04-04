@@ -16,10 +16,13 @@ The repository mainly contains 1 spreadsheet, 2 python files and 2 folders:
 - ```Raw_Data.xlsx```
 - ```In_Silico.py```
 - ```ANN_In_Silico.py```
-- ```In_Silico```
-- ```Trained_Models```
+- ```In_Silico/```
+- ```Trained_Models/```
 
 Additionally, the In-Silico generated data for all the instances reported in the paper (50, 125, 250, 500, 750 and 1000) are included here. The models corresponding to such data are also available here. 
+
+### ```Raw_Data.xlsx```
+It is a spreadsheet containing the experimental data used, not only for the model discrimination, but also for the parameter estimation.
 
 ### ```In_Silico.py```
 This file requires the following user-specified inputs:
