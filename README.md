@@ -1,5 +1,8 @@
 # ANN_Reforming_Modeling
-Description.
+This is the official GitHub repository of the paper "Improving the robustness of the hydrocarbon steam reforming kinetic models based on artificial neural networks".
+
+## Description 
+The main purpose of this repository is to share the code relative to the In-Silico data generation step and the kinetic model discrimination through an Artificial Neural Network. This code was fully written in Python using an Anaconda virtual environment.
 
 ## Dependancies
 
