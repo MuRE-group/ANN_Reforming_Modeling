@@ -1,7 +1,7 @@
 # ANN_Reforming_Modeling
 This is the official GitHub repository of the paper "Improving the robustness of the hydrocarbon steam reforming kinetic models based on artificial neural networks".
 
-## Description 
+## Description
 The main purpose of this repository is to share the code relative to the In-Silico data generation step and the kinetic model discrimination through an Artificial Neural Network. This code was fully written in Python using an Anaconda virtual environment.
 
 ## Dependancies
@@ -9,9 +9,9 @@ The Anaconda enviroment used in this work mainly requires commonly used packages
 ```
 conda env create -f ANN_Naphtha_Reforming.yml
 ```
-For more information, refer to [Conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file). 
+For more information, refer to [Conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file).
 
-## Files 
+## Files
 The repository mainly contains 1 spreadsheet, 2 python files and 2 folders:
 - ```Raw_Data.xlsx```
 - ```In_Silico.py```
@@ -30,6 +30,20 @@ This file corresponds to the In_Silico data generation step and requires the fol
 - ***sigmar***: Parameter to tune the Gaussian noise that can be added to the generated data.
 - ***sigmac***: Parameter to tune the Gaussian noise that can be added to the generated data.
 - ***distribution***: If true, displays a distribution of the kinetic parameter selection.
+
+The generated data (Data_in_silico_*instances_per_model*) is provided both in .csv and .xlsx formats. Also, a text summary (README_In_Silico.txt) is provided.
+
+### ```In_Silico/```
+This folder contains several folders underneath which contain the data generated in all the cases reported in the paper. In each of the subfolders, data corresponding to same kinetic parameter domain without noise is stored, varying the number of instances per model (50, 125, 250, 500, 750, 1000) from one to another. Each of the subfolders contains a text summary along with the generated data in .csv and .xlsx.
+
+### ```Trained_Models/```
+This folder also contains several folders, each of them corresponding to the same cases present in In_Silico/. The files Gridsearch.csv and Gridsearch.xlsx contain the complete results from the grid search for the ANN. The model with the best performing hyperparameters is provided in both json (best_model.json) and h5 (best_model.h5) formats, as suggested by [Tensorflow] (https://www.tensorflow.org/guide/keras/save_and_serialize).
+
+## Authorship
+
+## Acknowledgments
+
+## Citationson.
 
 The generated data (Data_in_silico_*instances_per_model*) is provided both in .csv and .xlsx formats. Also, a text summary (README_In_Silico.txt) is provided.
 
