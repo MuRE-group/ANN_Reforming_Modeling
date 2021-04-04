@@ -40,7 +40,7 @@ This folder contains several folders underneath which contain the data generated
 - ```README_In_Silico.txt```
 
 ### ```Trained_Models/```
-This folder also contains several folders, each of them corresponding to the same cases present in ```In_Silico/. Each subfolder contains the output of ```ANN_In_Silico.py```:
+This folder also contains several folders, each of them corresponding to the same cases present in ```In_Silico/. Each subfolder contains the output of ANN_In_Silico.py```:
 - The files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete results from the grid search for the ANN. 
 - The model with the best performing hyperparameters is provided in both json (```best_model.json```) and h5 (```best_model.h5```) formats, as suggested by [Tensorflow](https://www.tensorflow.org/guide/keras/save_and_serialize). 
 - ```README_In_Silico.txt```
