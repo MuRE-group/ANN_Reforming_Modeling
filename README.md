@@ -1,4 +1,4 @@
-# ANN_Reforming_Modeling
+# ANN-based kinetic model discrimination 
 This is the official GitHub repository of the paper "Improving the robustness of the hydrocarbon steam reforming kinetic models based on artificial neural networks".
 
 ## Description
