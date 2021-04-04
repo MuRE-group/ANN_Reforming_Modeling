@@ -55,9 +55,11 @@ This folder contains several (compressed) folders underneath which contain the d
 
 Because of the large size of some .csv files, these have been pickled and therefore, have to be unpickled in order to be used. For instance, to unplickle the data corresponding to 50 instances (```Data_in_silico_50```) into ```Data_in_silico_50.csv```, the following commands should be employed:
 
-```with open('Data_in_silico_50', 'rb') as picklefile:```
-```df = pickle.load(picklefile)```
-```df.to_csv('Data_in_silico_50.csv')```
+```
+with open('Data_in_silico_50', 'rb') as picklefile:
+       df = pickle.load(picklefile)
+       df.to_csv('Data_in_silico_50.csv')
+```
 
 ### ```Trained_Models/```
 This folder also contains several folders, each of them corresponding to the same cases present in ```In_Silico/```. Each subfolder stores the output of ```ANN_In_Silico.py```:
