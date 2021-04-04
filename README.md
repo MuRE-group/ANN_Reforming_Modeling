@@ -48,7 +48,6 @@ The files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete re
 ### ```In_Silico/```
 This folder contains several folders underneath which contain the data generated in-silico for all the cases reported in the paper. In each of the subfolders, data corresponding to same kinetic parameter domain without noise is stored, varying the number of instances per model (50, 125, 250, 500, 750, 1000) from one to another. Each of the subfolders contains the output of ```In_Silico.py```:
 - ```Data_in_silico_*instances_per_model*.csv```
-- ```Data_in_silico_*instances_per_model*.xlsx```
 - ```README_In_Silico.txt```
 
 ### ```Trained_Models/```
@@ -58,5 +57,7 @@ This folder also contains several folders, each of them corresponding to the sam
 - ```best_model.json```
 - ```best_model.h5```
 - ```README_Best_Training.txt``` 
+
+## Acknowledgements
 
 ## Citations
