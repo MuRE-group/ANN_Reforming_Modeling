@@ -4,7 +4,7 @@ This is the official GitHub repository of the paper "Improving the robustness of
 ## Description
 The main purpose of this repository is to share the code relative to the In-Silico data generation step and the kinetic model discrimination through an Artificial Neural Network. This code was fully written in Python using an Anaconda virtual environment.
 
-## Dependancies
+## Dependencies
 The Anaconda enviroment used in this work mainly requires commonly used packages like Numpy, Scipy, Pandas, Scikit-Learn, Tensorflow or Keras. To replicate the environment, download the provided ```ANN_Naphtha_Reforming.yml``` file and type the following command:
 ```
 conda env create -f ANN_Naphtha_Reforming.yml
@@ -31,9 +31,18 @@ This file corresponds to the In_Silico data generation step and requires the fol
 - ***sigmac***: Parameter to tune the Gaussian noise that can be added to the generated data.
 - ***distribution***: If true, displays a distribution of the kinetic parameter selection.
 
-The generated data is provided both in .csv (```Data_in_silico_*instances_per_model*.csv```) and .xlsx (```Data_in_silico_*instances_per_model*.xlsx```) formats. Also, a text summary (```README_In_Silico.txt```) is provided.
+This file has the following dependencies:
+- ```Raw_Data.xlsx```
+
+The generated data is provided both in .csv (```Data_in_silico_*instances_per_model*.csv```) and .xlsx (```Data_in_silico_*instances_per_model*.xlsx```) formats. A list with the names of the models of choice (```model_list_*instances_per_model*.sav```) is also given as output. A text summary (```README_In_Silico.txt```) is provided.
 
 ### ```ANN_In_Silico.py```
+
+This file has the following dependencies:
+- ```Raw_Data.xlsx```
+- ```Data_in_silico_*instances_per_model*.csv```
+- ```model_list_*instances_per_model*.sav```
+
 The files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete results from the grid search for the ANN. The model with the best performing hyperparameters is provided in both json (```best_model.json```) and h5 (```best_model.h5```) formats, as suggested by [Tensorflow](https://www.tensorflow.org/guide/keras/save_and_serialize). A text summary of the ANN training outcome ```README_Best_Training.txt``` is also provided.
 
 ### ```In_Silico/```
