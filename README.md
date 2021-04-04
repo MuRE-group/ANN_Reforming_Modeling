@@ -66,4 +66,4 @@ The authors gratefully acknowledge financial support, resources and facilities p
 ## Citations
 
 ## Contact 
-This work has been carried out within the Multiscale Reaction Engineering (MuRE) group, led by Dr. Pedro Castaño, in the KAUST Catalysis Center (Saudi Arabia). Find out more [here](https://mure.kaust.edu.sa).
+This work has been carried out within the Multiscale Reaction Engineering ([MuRE](https://mure.kaust.edu.sa)) group, led by Dr. Pedro Castaño, in the KAUST Catalysis Center (Saudi Arabia).
