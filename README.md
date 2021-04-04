@@ -37,6 +37,9 @@ This file has the following dependencies:
 The generated data is provided both in .csv (```Data_in_silico_*instances_per_model*.csv```) and .xlsx (```Data_in_silico_*instances_per_model*.xlsx```) formats. A list with the names of the models of choice (```model_list_*instances_per_model*.sav```) is also given as output. A text summary (```README_In_Silico.txt```) is provided.
 
 ### ```ANN_In_Silico.py```
+This file corresponds to the training of the Artificil Neural Network and requires the following user-specified inputs:
+- ***instances_per_model***: Number of instances per model for which the conservation equation has been solved.
+- ***hypar***: A dictionary with the hyperparameter (keys) and a numpy array with their domains in which the gridsearch should be performed (values).
 
 This file has the following dependencies:
 - ```Raw_Data.xlsx```
