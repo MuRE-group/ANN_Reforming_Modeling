@@ -19,13 +19,11 @@ The repository mainly contains 1 spreadsheet, 2 python files and 2 folders:
 - ```In_Silico/```
 - ```Trained_Models/```
 
-Additionally, the In-Silico generated data for all the instances reported in the paper (50, 125, 250, 500, 750 and 1000) are included here. The models corresponding to such data are also available here. 
-
 ### ```Raw_Data.xlsx```
 It is a spreadsheet containing the experimental data used, not only for the model discrimination, but also for the parameter estimation.
 
 ### ```In_Silico.py```
-This file requires the following user-specified inputs:
+This file corresponds to the In_Silico data generation step and requires the following user-specified inputs:
 - ***params_dict***: A dictionary with the kinetic parameters (keys) and a numpy array with the lower and upper boundaries (values).
 - ***instances_per_model***: Number of instances per model for which the conservation equation should be solved.
 - ***models***: A list of the models for which the conservation equation should be solved.
@@ -34,6 +32,12 @@ This file requires the following user-specified inputs:
 - ***distribution***: If true, displays a distribution of the kinetic parameter selection.
 
 The generated data (Data_in_silico_*instances_per_model*) is provided both in .csv and .xlsx formats. Also, a text summary (README_In_Silico.txt) is provided.
+
+### ```In_Silico/```
+This folder contains several folders underneath which contain the data generated in all the cases reported in the paper. In each of the subfolders, data corresponding to same kinetic parameter domain without noise is stored, varying the number of instances per model (50, 125, 250, 500, 750, 1000) from one to another. Each of the subfolders contains a text summary along with the generated data in .csv and .xlsx. 
+
+### ```Trained_Models/```
+This folder also contains several folders, each of them corresponding to the same cases present in In_Silico/. The files Gridsearch.csv and Gridsearch.xlsx contain the complete results from the grid search for the ANN. The model with the best performing hyperparameters is provided in both json (best_model.json) and h5 (best_model.h5) formats, as suggested by [Tensorflow] (https://www.tensorflow.org/guide/keras/save_and_serialize). 
 
 ## Authorship
 
