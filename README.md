@@ -31,7 +31,7 @@ This file corresponds to the In_Silico data generation step and requires the fol
 - ***sigmac***: Parameter to tune the Gaussian noise that can be added to the generated data.
 - ***distribution***: If true, displays a distribution of the kinetic parameter selection.
 
-The generated data is provided both in .csv (```Data_in_silico_*instances_per_model.csv```) and .xlsx (```Data_in_silico_*instances_per_model.xlsx```) formats. Also, a text summary (```README_In_Silico.txt```) is provided.
+The generated data is provided both in .csv (```Data_in_silico_***instances_per_model***.csv```) and .xlsx (```Data_in_silico_***instances_per_model.xlsx***```) formats. Also, a text summary (```README_In_Silico.txt```) is provided.
 
 ### ```In_Silico/```
 This folder contains several folders underneath which contain the data generated In_Silico in all the cases reported in the paper. In each of the subfolders, data corresponding to same kinetic parameter domain without noise is stored, varying the number of instances per model (50, 125, 250, 500, 750, 1000) from one to another. Each of the subfolders contains the output of ```In_Silico.py```:
