@@ -20,15 +20,14 @@ Additionally, the In-Silico generated data for all the instances reported in the
 
 ### ```In_Silico.py```
 This file requires the following user-specified inputs:
-- ***params_dict***: 
-- ***instances_per_model***:
-- ***models***: 
-- ***sigmar***:
-- ***sigmac***:
-- ***distribution***: 
+- ***params_dict***: A dictionary with the kinetic parameters (keys) and a numpy array with the lower and upper boundaries (values).
+- ***instances_per_model***: Number of instances per model for which the conservation equation should be solved.
+- ***models***: A list of the models for which the conservation equation should be solved.
+- ***sigmar***: Parameter to tune the Gaussian noise that can be added to the generated data.
+- ***sigmac***: Parameter to tune the Gaussian noise that can be added to the generated data.
+- ***distribution***: If true, displays a distribution of the kinetic parameter selection.
 
-The generated data is provided 
-
+The generated data (Data_in_silico_*instances_per_model*) is provided both in .csv and .xlsx formats. Also, a text summary (README_In_Silico.txt) is provided.
 
 ## Authorship
 
