@@ -61,5 +61,9 @@ This folder also contains several folders, each of them corresponding to the sam
 - ```README_Best_Training.txt``` 
 
 ## Acknowledgements
+The authors gratefully acknowledge financial support, resources and facilities provided by the King Abdullah University of Science and Technology (KAUST). 
 
 ## Citations
+
+## Contact 
+This work has been carried out within the Multiscale Reaction Engineering (MuRE) group, led by Dr. Pedro Castaño, in the KAUST Catalysis Center (Saudi Arabia). Find out more [here](https://mure.kaust.edu.sa).
