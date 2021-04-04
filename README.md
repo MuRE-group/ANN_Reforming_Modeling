@@ -9,6 +9,9 @@ conda env create -f ANN_Naphtha_Reforming.yml
 For more information, refer to [Conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file).
 
 ## Files
+
+![GitHub Logo](/images/Workflow.jpeg)
+
 The repository mainly contains 1 spreadsheet, 2 python files and 2 folders:
 - ```Raw_Data.xlsx```
 - ```In_Silico.py```
