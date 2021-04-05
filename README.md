@@ -22,7 +22,7 @@ The repository mainly contains 1 spreadsheet, 2 python files and 2 folders:
 It is a spreadsheet containing the experimental data used, not only for the model discrimination, but also for the parameter estimation.
 
 ### ```In_Silico.py```
-This file corresponds to the In_Silico data generation step and requires the following user-specified inputs:
+This file corresponds to the in-silico data generation step and requires the following user-specified inputs:
 - ***params_dict***: A dictionary with the kinetic parameters (keys) and a numpy array with the lower and upper boundaries (values).
 - ***instances_per_model***: Number of instances per model for which the conservation equation should be solved.
 - ***models***: A list of the models for which the conservation equation should be solved.
