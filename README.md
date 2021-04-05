@@ -48,7 +48,7 @@ This file has the following dependencies:
 The files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete results from the grid search for the ANN. The model with the best performing hyperparameters is provided in both json (```best_model.json```) and h5 (```best_model.h5```) formats, as suggested by [Tensorflow](https://www.tensorflow.org/guide/keras/save_and_serialize). A text summary of the ANN training outcome ```README_Best_Training.txt``` is also provided.
 
 ### ```In_Silico/```
-This folder contains several (compressed) folders underneath which contain the data generated in-silico for all the cases reported in the paper. In each of the subfolders, data corresponding to same kinetic parameter domain without noise is stored, varying the number of instances per model (50, 125, 250, 500) from one to another. Each subfolder contains the output of ```In_Silico.py```:
+This folder contains several (compressed) folders underneath which contain the data generated in-silico for most of the cases reported in the paper. In each of the subfolders, data corresponding to same kinetic parameter domain without noise is stored, varying the number of instances per model (50, 125, 250, 500) from one to another. Each subfolder contains the output of ```In_Silico.py```:
 - ```Data_in_silico_*instances_per_model*```
 - ```model_list_*instances_per_model*.sav```
 - ```README_In_Silico.txt```
