@@ -34,7 +34,11 @@ A python script for the in-silico data generation step that requires the followi
 This file has the following dependencies:
 - ```Raw_Data.xlsx```
 
-Generated data is provided both in .csv (```Data_in_silico.csv```) and .xlsx (```Data_in_silico.xlsx```) formats. A list with the names of the models of choice (```model_list_*instances_per_model*.sav```) is also given as output, along with text summary (```README_In_Silico.txt```) is provided.
+Generated data is provided both in .csv and .xlsx formats. A list with the names of the models of choice is also given as output, along with a text summary. For instance, the output files if 50 instaces per model are defined:  
+- ```Data_in_silico_50.csv```
+- ```Data_in_silico_50.xlsx```
+- ```model_list_50.sav```
+- ```README_In_Silico.txt```
 
 ### ```ANN_In_Silico.py```
 This file corresponds to the training of the Artificil Neural Network and requires the following user-specified inputs:
