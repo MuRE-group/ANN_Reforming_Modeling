@@ -21,7 +21,7 @@ The workflow followed in this paper is as follows:
 ![Workflow](/images/Workflow.jpeg)
 
 ### ```Raw_Data.xlsx```
-It is a spreadsheet containing the experimental data used, not only for the model discrimination, but also for the parameter estimation.
+A spreadsheet containing the raw experimental data used, not only for the model discrimination, but also for the parameter estimation.
 
 ### ```In_Silico.py```
 This file corresponds to the in-silico data generation step and requires the following user-specified inputs:
