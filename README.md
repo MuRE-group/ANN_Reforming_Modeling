@@ -22,7 +22,7 @@ The repository mainly contains 1 spreadsheet, 2 python files and 2 folders:
 It is a spreadsheet containing the experimental data used, not only for the model discrimination, but also for the parameter estimation.
 
 ### ```In_Silico.py```
-This file corresponds to the In_Silico data generation step and requires the following user-specified inputs:
+This file corresponds to the in-silico data generation step and requires the following user-specified inputs:
 - ***params_dict***: A dictionary with the kinetic parameters (keys) and a numpy array with the lower and upper boundaries (values).
 - ***instances_per_model***: Number of instances per model for which the conservation equation should be solved.
 - ***models***: A list of the models for which the conservation equation should be solved.
@@ -48,7 +48,7 @@ This file has the following dependencies:
 The files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete results from the grid search for the ANN. The model with the best performing hyperparameters is provided in both json (```best_model.json```) and h5 (```best_model.h5```) formats, as suggested by [Tensorflow](https://www.tensorflow.org/guide/keras/save_and_serialize). A text summary of the ANN training outcome ```README_Best_Training.txt``` is also provided.
 
 ### ```In_Silico/```
-This folder contains several (compressed) folders underneath which contain the data generated in-silico for all the cases reported in the paper. In each of the subfolders, data corresponding to same kinetic parameter domain without noise is stored, varying the number of instances per model (50, 125, 250, 500) from one to another. Each subfolder contains the output of ```In_Silico.py```:
+This folder contains several (compressed) folders underneath which contain the data generated in-silico for most of the cases reported in the paper. In each of the subfolders, data corresponding to same kinetic parameter domain without noise is stored, varying the number of instances per model (50, 125, 250, 500) from one to another. Each subfolder contains the output of ```In_Silico.py```:
 - ```Data_in_silico_*instances_per_model*```
 - ```model_list_*instances_per_model*.sav```
 - ```README_In_Silico.txt```
