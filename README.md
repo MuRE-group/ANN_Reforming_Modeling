@@ -34,23 +34,23 @@ A python script for the in-silico data generation step that requires the followi
 This file has the following dependencies:
 - ```Raw_Data.xlsx```
 
-Generated data is provided both in .csv and .xlsx formats. A list with the names of the models of choice is also given as output, along with a text summary. For instance, the output files if 50 instaces per model are defined:  
+Generated data is provided both in .csv and .xlsx formats. A list with the names of the models of choice is also given as output, along with a text summary. For instance, in the case 50 instaces per model are defined, the output files are the following:  
 - ```Data_in_silico_50.csv```
 - ```Data_in_silico_50.xlsx```
 - ```model_list_50.sav```
 - ```README_In_Silico.txt```
 
 ### ```ANN_In_Silico.py```
-This file corresponds to the training of the Artificil Neural Network and requires the following user-specified inputs:
+A python script for the training of the artificil neural network that requires the following user-specified inputs:
 - ***instances_per_model***: Number of instances per model for which the conservation equation has been solved.
-- ***hypar***: A dictionary with the hyperparameter (keys) and a numpy array with their domains in which the gridsearch should be performed (values).
+- ***hypar***: A dictionary with the names of the hyperparameter (keys) and a np.array with their domains in which the gridsearch should be performed (values).
 
-This file has the following dependencies:
+This file has the following dependencies (in the case 50 instaces per model are defined):
 - ```Raw_Data.xlsx```
-- ```Data_in_silico_*instances_per_model*.csv```
-- ```model_list_*instances_per_model*.sav```
+- ```Data_in_silico_50.csv```
+- ```model_list_50.sav```
 
-The files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete results from the grid search for the ANN. The model with the best performing hyperparameters is provided in both json (```best_model.json```) and h5 (```best_model.h5```) formats, as suggested by [Tensorflow](https://www.tensorflow.org/guide/keras/save_and_serialize). A text summary of the ANN training outcome ```README_Best_Training.txt``` is also provided.
+The output files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete results from the grid search for the ANN. The model with the best performing hyperparameters is provided in both json (```best_model.json```) and h5 (```best_model.h5```) formats, as suggested by [Tensorflow](https://www.tensorflow.org/guide/keras/save_and_serialize). A text summary of the ANN training outcome ```README_Best_Training.txt``` is also provided.
 
 ### ```In_Silico/```
 This folder contains several (compressed) folders underneath which contain the data generated in-silico for most of the cases reported in the paper. In each of the subfolders, data corresponding to same kinetic parameter domain without noise is stored, varying the number of instances per model (50, 125, 250, 500) from one to another. Each subfolder contains the output of ```In_Silico.py```:
