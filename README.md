@@ -24,7 +24,7 @@ A spreadsheet containing the raw experimental data used, not only for the model 
 
 ### ```In_Silico.py```
 A python script for the in-silico data generation step that requires the following user-specified inputs:
-- ***params_dict***: A dictionary with the names of the kinetic parameters (keys) and an array with the lower and upper boundaries (values).
+- ***params_dict***: A dictionary with the names of the kinetic parameters (keys) and a np.array with the lower and upper boundaries (values).
 - ***instances_per_model***: Number of instances per model for which the conservation equation should be solved.
 - ***models***: A list of the models for which the conservation equation should be solved. Rate expressions of the specified models need to be updated in the conservation_eq function.
 - ***sigmar***: Parameter defining the Gaussian noise, proportional to the generated data.
