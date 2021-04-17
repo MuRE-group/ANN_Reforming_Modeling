@@ -34,7 +34,7 @@ A Python script for the in-silico data generation step that requires the followi
 This file has the following dependencies:
 - ```Raw_Data.xlsx```
 
-Generated data is provided both in .csv and .xlsx formats. A list with the names of the models of choice is also given as output, along with a text summary. For instance, in the case 50 instaces per model are defined, the output files are the following:  
+Generated data is provided both in .csv and .xlsx formats. A list with the names of the models of choice is also given as output, along with a text summary. For example, in the case 50 instaces per model are defined, the output files are the following:  
 - ```Data_in_silico_50.csv```
 - ```Data_in_silico_50.xlsx```
 - ```model_list_50.sav```
