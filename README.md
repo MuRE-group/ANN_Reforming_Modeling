@@ -1,5 +1,5 @@
 # ANN-based kinetic model discrimination 
-This is the official GitHub repository of the paper ***"Improving the robustness of the hydrocarbon steam reforming kinetic models based on artificial neural networks"***. This repository contains the code relative to the *In-Silico* data generation and kinetic model discrimination steps through an artificial neural network, fully written in Python using an Anaconda virtual environment.
+This is the official GitHub repository of the paper "Improving the robustness of the hydrocarbon steam reforming kinetic models based on artificial neural networks". This repository contains the code relative to the *In-Silico* data generation and kinetic model discrimination steps through an artificial neural network, fully written in Python using an Anaconda virtual environment.
 
 ## Setting up the environment
 The Anaconda enviroment used in this work mainly requires commonly used packages like Numpy, Scipy, Pandas, Scikit-Learn, Tensorflow or Keras. To replicate the environment, download the provided ```ANN_Naphtha_Reforming.yml``` file and type the following command:
