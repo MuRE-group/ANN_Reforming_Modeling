@@ -1,5 +1,5 @@
 # ANN-based kinetic model discrimination 
-This is the official GitHub repository of the paper "Improving the robustness of the hydrocarbon steam reforming kinetic models based on artificial neural networks". The main purpose of this repository is to share the code relative to the In-Silico data generation step and the kinetic model discrimination through an Artificial Neural Network. This code was fully written in Python using an Anaconda virtual environment.
+This is the official GitHub repository of the paper "Improving the robustness of the hydrocarbon steam reforming kinetic models based on artificial neural networks". This repository contains the code relative to the *in-silico* data generation and kinetic model discrimination steps, fully written in Python using an Anaconda virtual environment.
 
 ## Setting up the environment
 The Anaconda enviroment used in this work mainly requires commonly used packages like Numpy, Scipy, Pandas, Scikit-Learn, Tensorflow or Keras. To replicate the environment, download the provided ```ANN_Naphtha_Reforming.yml``` file and type the following command:
@@ -9,52 +9,58 @@ conda env create -f ANN_Naphtha_Reforming.yml
 For more information, refer to [Conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file).
 
 ## Files
-The repository mainly contains 1 spreadsheet, 2 python files and 2 folders:
+This repository mainly contains 1 spreadsheet, 2 python files and 2 folders:
 - ```Raw_Data.xlsx```
 - ```In_Silico.py```
 - ```ANN_In_Silico.py```
 - ```In_Silico/```
 - ```Trained_Models/```
 
+The workflow followed in this paper is as follows:
 ![Workflow](/images/Workflow.jpeg)
 
 ### ```Raw_Data.xlsx```
-It is a spreadsheet containing the experimental data used, not only for the model discrimination, but also for the parameter estimation.
+A spreadsheet containing the raw experimental data used, not only for the model discrimination, but also for the parameter estimation.
 
 ### ```In_Silico.py```
-This file corresponds to the in-silico data generation step and requires the following user-specified inputs:
-- ***params_dict***: A dictionary with the kinetic parameters (keys) and a numpy array with the lower and upper boundaries (values).
+A Python script for the in-silico data generation step that requires the following user-specified inputs:
+- ***params_dict***: A dictionary with the names of the kinetic parameters (keys) and a np.array with the lower and upper boundaries (values).
 - ***instances_per_model***: Number of instances per model for which the conservation equation should be solved.
-- ***models***: A list of the models for which the conservation equation should be solved.
-- ***sigmar***: Parameter to tune the Gaussian noise that can be added to the generated data.
-- ***sigmac***: Parameter to tune the Gaussian noise that can be added to the generated data.
-- ***distribution***: If true, displays a distribution of the kinetic parameter selection.
+- ***models***: A list of the models for which the conservation equation should be solved. Rate expressions of the specified models need to be updated in the conservation_eq function.
+- ***sigmar***: Parameter defining the Gaussian noise, proportional to the generated data.
+- ***sigmac***: Parameter defining the Gaussian noise, constant added to the generated data.
+- ***distribution***: If true, displays a distribution of the kinetic parameter sampling.
 
 This file has the following dependencies:
 - ```Raw_Data.xlsx```
 
-The generated data is provided both in .csv (```Data_in_silico_*instances_per_model*.csv```) and .xlsx (```Data_in_silico_*instances_per_model*.xlsx```) formats. A list with the names of the models of choice (```model_list_*instances_per_model*.sav```) is also given as output. A text summary (```README_In_Silico.txt```) is provided.
-
-### ```ANN_In_Silico.py```
-This file corresponds to the training of the Artificil Neural Network and requires the following user-specified inputs:
-- ***instances_per_model***: Number of instances per model for which the conservation equation has been solved.
-- ***hypar***: A dictionary with the hyperparameter (keys) and a numpy array with their domains in which the gridsearch should be performed (values).
-
-This file has the following dependencies:
-- ```Raw_Data.xlsx```
-- ```Data_in_silico_*instances_per_model*.csv```
-- ```model_list_*instances_per_model*.sav```
-
-The files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete results from the grid search for the ANN. The model with the best performing hyperparameters is provided in both json (```best_model.json```) and h5 (```best_model.h5```) formats, as suggested by [Tensorflow](https://www.tensorflow.org/guide/keras/save_and_serialize). A text summary of the ANN training outcome ```README_Best_Training.txt``` is also provided.
-
-### ```In_Silico/```
-This folder contains several (compressed) folders underneath which contain the data generated in-silico for most of the cases reported in the paper. In each of the subfolders, data corresponding to same kinetic parameter domain without noise is stored, varying the number of instances per model (50, 125, 250, 500) from one to another. Each subfolder contains the output of ```In_Silico.py```:
-- ```Data_in_silico_*instances_per_model*```
-- ```model_list_*instances_per_model*.sav```
+Generated data is provided both in .csv and .xlsx formats. A list with the names of the models of choice is also given as output, along with a text summary. For example, in the case 50 instaces per model are defined, the output files are the following:  
+- ```Data_in_silico_50.csv```
+- ```Data_in_silico_50.xlsx```
+- ```model_list_50.sav```
 - ```README_In_Silico.txt```
 
-Because of the large size of some .csv files, these have been pickled and therefore, have to be unpickled in order to be used. For instance, to unplickle the data corresponding to 50 instances (```Data_in_silico_50```) into ```Data_in_silico_50.csv```, the following commands should be employed:
+### ```ANN_In_Silico.py```
+A Python script for the training of the artificil neural network that requires the following user-specified inputs:
+- ***instances_per_model***: Number of instances per model for which the conservation equation has been solved.
+- ***hypar***: A dictionary with the names of the hyperparameter (keys) and a np.array with their domains in which the gridsearch should be performed (values).
 
+This file has the following dependencies (in the case 50 instaces per model are defined):
+- ```Raw_Data.xlsx```
+- ```Data_in_silico_50.csv```
+- ```model_list_50.sav```
+
+The output files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete results from the grid search for the ANN. The model with the best performing hyperparameters is provided in both json (```best_model.json```) and h5 (```best_model.h5```) formats, as suggested by [Tensorflow](https://www.tensorflow.org/guide/keras/save_and_serialize). A text summary of the ANN training outcome ```README_Best_Training.txt``` is also provided.
+
+### ```In_Silico/```
+A folder with several (compressed) folders underneath which contain the data generated *in-silico* for most of the cases reported in the paper. In each of the subfolders, generated data corresponding to the kinetic parameter domain specified in the paper without noise is stored, only varying the number of instances per model (50, 125, 250, 500) from one to another. Specific information is available in the ```README_In_Silico.txt``` file of each case. The Python script is seeded (numpy seed) so that the missing cases (instances per model 750 and 1000, due to heavy weight of the files) can be replicated.
+
+As an example, the subfolder with the output of ```In_Silico.py``` for the 50 instances per model contains:
+- ```Data_in_silico_50.csv```
+- ```model_list_50.sav```
+- ```README_In_Silico.txt```
+
+Because of the large size of the files stemming from the cases with high number of instances per model, the .xlsx files are not provided in the reporsitory. Note that the .xlsx files are not required to run ```ANN_In_Silico.py```. Additionally, the .csv files have been pickled and thus, have to be unpickled in order to be used. For example, to unpickle the data corresponding to 50 instances (```Data_in_silico_50```) into ```Data_in_silico_50.csv```, the following commands should be employed:
 ```
 with open('Data_in_silico_50', 'rb') as picklefile:
        df = pickle.load(picklefile)
@@ -62,7 +68,7 @@ with open('Data_in_silico_50', 'rb') as picklefile:
 ```
 
 ### ```Trained_Models/```
-This folder also contains several folders, each of them corresponding to the same cases present in ```In_Silico/```. Each subfolder stores the output of ```ANN_In_Silico.py```:
+A folder containing several folders, each of them corresponding to the same cases present in ```In_Silico/```. Each subfolder stores the output of ```ANN_In_Silico.py```:
 - ```Gridsearch.csv``` 
 - ```Gridsearch.xlsx```
 - ```best_model.json```
