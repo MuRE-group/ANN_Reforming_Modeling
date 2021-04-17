@@ -60,7 +60,7 @@ As an example, the subfolder with the output of ```In_Silico.py``` for the 50 in
 - ```model_list_50.sav```
 - ```README_In_Silico.txt```
 
-Because of the large size of the files stemming from the cases with high number of instances per model, the .xlsx files are not provided in the reporsitory. Note that the .xlsx files are not required to run ```ANN_In_Silico.py```. Additionally, the .csv files have been pickled and therefore, have to be unpickled in order to be used. For example, to unpickle the data corresponding to 50 instances (```Data_in_silico_50```) into ```Data_in_silico_50.csv```, the following commands should be employed:
+Because of the large size of the files stemming from the cases with high number of instances per model, the .xlsx files are not provided in the reporsitory. Note that the .xlsx files are not required to run ```ANN_In_Silico.py```. Additionally, the .csv files have been pickled and thus, have to be unpickled in order to be used. For example, to unpickle the data corresponding to 50 instances (```Data_in_silico_50```) into ```Data_in_silico_50.csv```, the following commands should be employed:
 ```
 with open('Data_in_silico_50', 'rb') as picklefile:
        df = pickle.load(picklefile)
