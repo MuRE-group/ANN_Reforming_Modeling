@@ -10,6 +10,12 @@ For more information, refer to [Conda documentation](https://conda.io/projects/c
 
 ## Files
 This repository mainly contains 1 spreadsheet, 2 python files and 2 folders:
+
+| File name    | Center-aligned | Right-aligned |
+| :---         | :---           | :---          |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
+
 - ```Raw_Data.xlsx```
 - ```In_Silico.py```
 - ```ANN_In_Silico.py```
