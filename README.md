@@ -16,6 +16,8 @@ This repository mainly contains 1 spreadsheet, 2 python files and 2 folders:
 - ```In_Silico/```
 - ```Trained_Models/```
 
+The workflow followed in this work is as follows:
+
 ![Workflow](/images/Workflow.jpeg)
 
 ### ```Raw_Data.xlsx```
