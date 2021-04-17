@@ -23,7 +23,7 @@ The workflow followed in this paper is as follows:
 A spreadsheet containing the raw experimental data used, not only for the model discrimination, but also for the parameter estimation.
 
 ### ```In_Silico.py```
-A python script for the in-silico data generation step that requires the following user-specified inputs:
+A Python script for the in-silico data generation step that requires the following user-specified inputs:
 - ***params_dict***: A dictionary with the names of the kinetic parameters (keys) and a np.array with the lower and upper boundaries (values).
 - ***instances_per_model***: Number of instances per model for which the conservation equation should be solved.
 - ***models***: A list of the models for which the conservation equation should be solved. Rate expressions of the specified models need to be updated in the conservation_eq function.
@@ -41,7 +41,7 @@ Generated data is provided both in .csv and .xlsx formats. A list with the names
 - ```README_In_Silico.txt```
 
 ### ```ANN_In_Silico.py```
-A python script for the training of the artificil neural network that requires the following user-specified inputs:
+A Python script for the training of the artificil neural network that requires the following user-specified inputs:
 - ***instances_per_model***: Number of instances per model for which the conservation equation has been solved.
 - ***hypar***: A dictionary with the names of the hyperparameter (keys) and a np.array with their domains in which the gridsearch should be performed (values).
 
@@ -53,13 +53,14 @@ This file has the following dependencies (in the case 50 instaces per model are 
 The output files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete results from the grid search for the ANN. The model with the best performing hyperparameters is provided in both json (```best_model.json```) and h5 (```best_model.h5```) formats, as suggested by [Tensorflow](https://www.tensorflow.org/guide/keras/save_and_serialize). A text summary of the ANN training outcome ```README_Best_Training.txt``` is also provided.
 
 ### ```In_Silico/```
-This folder contains several (compressed) folders underneath which contain the data generated in-silico for most of the cases reported in the paper. In each of the subfolders, data corresponding to same kinetic parameter domain without noise is stored, varying the number of instances per model (50, 125, 250, 500) from one to another. Each subfolder contains the output of ```In_Silico.py```:
-- ```Data_in_silico_*instances_per_model*```
-- ```model_list_*instances_per_model*.sav```
+A folder with several (compressed) folders underneath which contain the data generated *in-silico* for most of the cases reported in the paper. In each of the subfolders, generated data corresponding to the kinetic parameter domain specified in the paper without noise is stored, only varying the number of instances per model (50, 125, 250, 500) from one to another. Specific information is available in the ```README_In_Silico.txt``` file of each case. The Python script is seeded (numpy seed) so that the missing cases (instances per model 750 and 1000, due to heavy weight of the files) can be replicated.
+
+As an example, the subfolder with the output of ```In_Silico.py``` for the 50 instances per model contains:
+- ```Data_in_silico_50.csv```
+- ```model_list_50.sav```
 - ```README_In_Silico.txt```
 
-Because of the large size of some .csv files, these have been pickled and therefore, have to be unpickled in order to be used. For instance, to unplickle the data corresponding to 50 instances (```Data_in_silico_50```) into ```Data_in_silico_50.csv```, the following commands should be employed:
-
+Because of the large size of the files stemming from the cases with high number of instances per model, the .xlsx files are not provided in the reporsitory. Additionally, the .csv files have been pickled and therefore, have to be unpickled in order to be used. For instance, to unpickle the data corresponding to 50 instances (```Data_in_silico_50```) into ```Data_in_silico_50.csv```, the following commands should be employed:
 ```
 with open('Data_in_silico_50', 'rb') as picklefile:
        df = pickle.load(picklefile)
@@ -67,7 +68,7 @@ with open('Data_in_silico_50', 'rb') as picklefile:
 ```
 
 ### ```Trained_Models/```
-This folder also contains several folders, each of them corresponding to the same cases present in ```In_Silico/```. Each subfolder stores the output of ```ANN_In_Silico.py```:
+A folder containing several folders, each of them corresponding to the same cases present in ```In_Silico/```. Each subfolder stores the output of ```ANN_In_Silico.py```:
 - ```Gridsearch.csv``` 
 - ```Gridsearch.xlsx```
 - ```best_model.json```
