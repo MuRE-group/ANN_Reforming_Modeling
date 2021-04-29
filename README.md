@@ -22,7 +22,7 @@ This repository mainly contains 1 spreadsheet, 2 python files and 2 folders:
 A spreadsheet containing the raw experimental data used, not only for the model discrimination, but also for the parameter estimation.
 
 ### ```In_Silico.py```
-A Python script for the in-silico data generation step that requires the following user-specified inputs:
+A Python script for the *in-silico* data generation step that requires the following user-specified inputs:
 - ***params_dict***: A dictionary with the names of the kinetic parameters (keys) and a np.array with the lower and upper boundaries (values).
 - ***instances_per_model***: Number of instances per model for which the conservation equation should be solved.
 - ***models***: A list of the models for which the conservation equation should be solved. Rate expressions of the specified models need to be updated in the conservation_eq function.
@@ -49,7 +49,7 @@ This file has the following dependencies (in the case 50 instaces per model are 
 - ```Data_in_silico_50.csv```
 - ```model_list_50.sav```
 
-The output files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete results from the grid search for the ANN. The model with the best performing hyperparameters is provided in both json (```best_model.json```) and h5 (```best_model.h5```) formats, as suggested by [Tensorflow](https://www.tensorflow.org/guide/keras/save_and_serialize). A text summary of the ANN training outcome ```README_Best_Training.txt``` is also provided.
+The output files ```Gridsearch.csv``` and ```Gridsearch.xlsx``` contain the complete results from the grid search for the ANN. The model with the best performing hyperparameters is provided in both *JSON* (```best_model.json```) and *HDF5* (```best_model.h5```) formats, as suggested by [Tensorflow](https://www.tensorflow.org/guide/keras/save_and_serialize). A text summary of the ANN training outcome ```README_Best_Training.txt``` is also provided.
 
 ### ```In_Silico/```
 A folder with several folders underneath which contain the data generated *in-silico* for all the cases reported in the paper. In each of the subfolders, generated data corresponding to the kinetic parameter domain specified in the paper without noise is stored, only varying the number of instances per model (50, 125, 250, 500, 750, 1000) from one to another. Specific information is available in the ```README_In_Silico.txt``` file of each case.
@@ -59,7 +59,7 @@ As an example, the subfolder with the output of ```In_Silico.py``` for the 50 in
 - ```model_list_50.sav```
 - ```README_In_Silico.txt```
 
-Because of the large size of the files stemming from the cases with high number of instances per model, neither .xlsx nor  .csv files are provided in the reporsitory. Note that the .xlsx files are not required to run ```ANN_In_Silico.py```. Instead, the .csv files have been compressed to HDF5 format and thus, have to be uncompressed in order to be used. For example, to uncompress the data corresponding to 50 instances (```Data_in_silico_50.h5```) into ```Data_in_silico_50.csv```, the following commands should be employed:
+Because of the large size of the files stemming from the cases with high number of instances per model, neither .xlsx nor  .csv files are provided in the reporsitory. Note that the .xlsx files are not required to run ```ANN_In_Silico.py```. Instead, the .csv files have been compressed to *HDF5* format and thus, have to be uncompressed in order to be used. For example, to uncompress the data corresponding to 50 instances (```Data_in_silico_50.h5```) into ```Data_in_silico_50.csv```, the following commands should be employed:
 ```
 with open('Data_in_silico_50.h5', 'rb'):
     df = pd.read_hdf('./Data_in_silico_50.h5')
