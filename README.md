@@ -40,7 +40,7 @@ Generated data is provided both in .csv and .xlsx formats. A list with the names
 - ```README_In_Silico.txt```
 
 ### ```ANN_In_Silico.py```
-A Python script for the training of the artificil neural network that requires the following user-specified inputs:
+A Python script for the training of the artificial neural network that requires the following user-specified inputs:
 - ***instances_per_model***: Number of instances per model for which the conservation equation has been solved.
 - ***hypar***: A dictionary with the names of the hyperparameter (keys) and a np.array with their domains in which the gridsearch should be performed (values).
 
