@@ -16,7 +16,7 @@ This repository mainly contains 1 spreadsheet, 2 python files and 2 folders:
 - ```In_Silico/```
 - ```Trained_Models/```
 
-![Workflow](/images/Workflow.jpeg)
+![Workflow](/images/Workflow.png)
 
 ### ```Raw_Data.xlsx```
 A spreadsheet containing the raw experimental data used, not only for the model discrimination, but also for the parameter estimation.
