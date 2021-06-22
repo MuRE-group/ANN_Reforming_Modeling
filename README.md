@@ -33,11 +33,13 @@ A Python script for the *in-silico* data generation step that requires the follo
 This file has the following dependencies:
 - ```Raw_Data.xlsx```
 
-Generated data is provided both in .csv and .xlsx formats. A list with the names of the models of choice is also given as output, along with a text summary. For example, in the case 50 instaces per model are defined, the output files are the following:  
+Generated data is provided both in .csv and .xlsx formats. A list with the names of the models of choice is also given as output, along with a text summary. The sampled parameters for each instance are stored in the (```Params_sampled.xlsx```) file and their distribution represented in (```Params_distribution.png```). For example, in the case 50 instaces per model are defined, the output files are the following:  
 - ```Data_in_silico_50.csv```
 - ```Data_in_silico_50.xlsx```
 - ```model_list_50.sav```
 - ```README_In_Silico.txt```
+- ```Params_distribution.png```
+- ```Params_sampled.xlsx```
 
 ### ```ANN_In_Silico.py```
 A Python script for the training of the artificial neural network that requires the following user-specified inputs:
@@ -59,7 +61,7 @@ As an example, the subfolder with the output of ```In_Silico.py``` for the 50 in
 - ```model_list_50.sav```
 - ```README_In_Silico.txt```
 - ```Params_distribution.png```
-- ```Params_sampled.xlsx``
+- ```Params_sampled.xlsx```
 
 Because of the large size of the files stemming from the cases with high number of instances per model, neither .xlsx nor  .csv files are provided in the reporsitory. Note that the .xlsx files are not required to run ```ANN_In_Silico.py```. Instead, the .csv files have been compressed to *HDF5* format and thus, have to be uncompressed in order to be used. For example, to uncompress the data corresponding to 50 instances (```Data_in_silico_50.h5```) into ```Data_in_silico_50.csv```, the following commands should be employed:
 ```
