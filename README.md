@@ -83,8 +83,8 @@ A folder containing several folders, each of them corresponding to the same case
 The authors gratefully acknowledge financial support, resources and facilities provided by the King Abdullah University of Science and Technology (KAUST). 
 
 ## Citations
-[DOI](https://doi.org/10.1016/j.cej.2021.133201)
-Text citation
+[DOI](https://doi.org/10.1016/j.cej.2021.133201). 
+Text citation  
 Bibtext citation
 
 ## Contact 
