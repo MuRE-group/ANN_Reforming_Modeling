@@ -84,8 +84,6 @@ The authors gratefully acknowledge financial support, resources and facilities p
 
 ## Citations
 [DOI](https://doi.org/10.1016/j.cej.2021.133201)  
-Text citation  
-Bibtext citation
 
 ## Contact 
 This work has been carried out within the Multiscale Reaction Engineering ([MuRE](https://mure.kaust.edu.sa)) group, led by Dr. Pedro Castaño, in the KAUST Catalysis Center (Saudi Arabia).
