@@ -83,6 +83,9 @@ A folder containing several folders, each of them corresponding to the same case
 The authors gratefully acknowledge financial support, resources and facilities provided by the King Abdullah University of Science and Technology (KAUST). 
 
 ## Citations
+[DOI](https://doi.org/10.1016/j.cej.2021.133201)
+Text citation
+Bibtext citation
 
 ## Contact 
 This work has been carried out within the Multiscale Reaction Engineering ([MuRE](https://mure.kaust.edu.sa)) group, led by Dr. Pedro Castaño, in the KAUST Catalysis Center (Saudi Arabia).
